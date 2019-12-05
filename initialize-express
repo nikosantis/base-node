@@ -1,0 +1,23 @@
+express --view=pug <nombre-de-la-aplicacion>
+
+#Cambiar de directorio:
+cd <nombre-de-la-aplicacion>
+
+#Instalar las dependencias:
+npm install
+
+#Ejecutar la app en dev
+DEBUG=<nombre-de-la-aplicacion>:* npm start 
+
+#Ejecutar la app en prod
+NODE_ENV=production npm start
+
+Usando template engines
+
+app.engine('<extension>', function( filePath, options, callback ){})
+
+app.set('views', '<directorio-de-vistas>');
+app.set('view engine', '<extension>');
+
+creando un custom engine
+
